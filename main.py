@@ -28,7 +28,7 @@ async def steam_callback(request: Request):
     android_intent_url = (
         f"intent://steam?steamId={steam_id}#Intent;"
         "scheme=myapp;"
-        "package=com.example.myapp;"
+        "package=com.example.tryharder;"
         "end;"
     )
     
