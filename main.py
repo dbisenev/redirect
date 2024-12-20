@@ -14,6 +14,7 @@ logger = logging.getLogger(__name__)
 def read_root():
     return {"message": "Steam OpenID Callback Server"}
 
+
 # Обработка Steam OpenID callback
 @app.get("/steamcallback")
 async def steam_callback(request: Request):
@@ -34,7 +35,7 @@ async def steam_callback(request: Request):
 
     # Пример редиректа или ответа в зависимости от вашего приложения:
     # Если хотите редиректить в приложение, например на кастомную схему, используйте RedirectResponse:
-    return RedirectResponse(url=f"myapp://steam?steamId={steam_id}")
+    return RedirectResponse(url=f"https://myapp?steamId={steam_id}")
 
     # Если хотите ответить с деталями:
     # return {"steam_id": steam_id, "message": "Authentication successful"}
